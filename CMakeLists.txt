@@ -17,3 +17,8 @@ add_executable(publisher_member_function_node src/publisher_member_function.cpp)
 target_link_libraries(publisher_member_function_node
   ${catkin_LIBRARIES}
 )
+
+add_executable(subscribe_member_function_node src/subscribe_member_function.cpp)
+target_link_libraries(subscribe_member_function_node
+  ${catkin_LIBRARIES}
+)
