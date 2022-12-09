@@ -12,13 +12,15 @@ namespace my_publisher
 {
   class Publisher : public rclcpp::Node
   {
+    using String = std_msgs::msg::String;
+    
     public:
       Publisher();
 
     private:
       void timer_callback();
       rclcpp::TimerBase::SharedPtr timer_;
-      rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+      rclcpp::Publisher<String>::SharedPtr publisher_;
       size_t count_;
   };
 }
