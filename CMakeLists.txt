@@ -15,7 +15,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
 unset(NODES)
-set(NODES publisher_member_function)
+set(NODES publisher_member_function;subscriber_member_function)
 foreach(target IN LISTS NODES)
   add_executable(${target}_node src/${target}.cpp)
   ament_target_dependencies(${target}_node rclcpp std_msgs)
